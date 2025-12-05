@@ -3,4 +3,3 @@ pandas==1.5.3
 python-dateutil
 pulp==2.7.0
 gunicorn
-
