@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>課表與讀書排程系統</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <h1 style="text-align:center;">互動課表（部署版）</h1>
+
+  <div class="controls">
+    <button id="btnClear">清除</button>
+    <button id="btnSaveServer">儲存到伺服器（產生 courses.csv）</button>
+    <a id="downloadCourses" href="/download/courses.csv">下載 courses.csv</a>
+  </div>
+
+  <div id="table-wrap">
+    <table id="schedule">
+      <thead>
+        <tr><th></th><th>週一</th><th>週二</th><th>週三</th><th>週四</th><th>週五</th></tr>
+      </thead>
+      <tbody id="schedule-body">
+      </tbody>
+    </table>
+  </div>
+
+  <div id="form-hint">拖曳選取格子後放開以填入</div>
+
+  <div id="courseListWrap">
+    <h2>課程列表</h2>
+    <table id="courseList"><thead><tr><th>課名</th><th>學分</th><th>類別</th><th>甜度</th><th>涼度</th><th>格次</th></tr></thead><tbody></tbody></table>
+  </div>
+
+  <div id="optArea">
+    <h2>優化與排程</h2>
+    <div>
+      <label>今日總分鐘<input id="totalMinutes" type="number" value="180"></label>
+      <label>每科最小分鐘<input id="minMinutes" type="number" value="30"></label>
+      <label>四捨五入到<input id="roundTo" type="number" value="30"></label>
+      <button id="btnCalcMinutes">計算分鐘 (server)</button>
+    </div>
+    <div>
+      <label>開始 <input id="startTime" type="time" value="19:00"></label>
+      <label>結束 <input id="endTime" type="time" value="22:00"></label>
+      <button id="btnMakeBlocks">生成排程 (server)</button>
+      <button id="btnDownloadSchedule">下載排程 CSV</button>
+      <button id="btnStartReminders">啟動提醒系統 (server)</button>
+    </div>
+    <div id="minutesResult"></div>
+    <div id="blocksResult"></div>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
