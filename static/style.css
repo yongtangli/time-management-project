@@ -1,0 +1,12 @@
+body{font-family: "Microsoft JhengHei", sans-serif; background:#f7fbff; color:#222; margin:18px;}
+h1{text-align:center;}
+.controls{display:flex;gap:10px;justify-content:center;margin-bottom:10px;}
+table{border-collapse:collapse;margin:auto;}
+#schedule th,#schedule td{border:1px solid #999;padding:6px;min-width:110px;height:46px;text-align:center;}
+.cell{background:#fff;cursor:pointer;}
+.cell.selected{outline:3px solid rgba(100,180,255,0.35);}
+.cell.occupied{color:#fff;font-weight:700;}
+.cell.conflict{background:#ff9999 !important;color:#400;}
+#courseList{width:90%;margin:12px auto;border-collapse:collapse;}
+#courseList th,#courseList td{border:1px solid #ddd;padding:6px;}
+#optArea{max-width:980px;margin:18px auto;background:#fff;padding:10px;border-radius:8px;}
