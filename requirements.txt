@@ -1,0 +1,5 @@
+Flask==2.2.5
+pandas==2.2.1
+python-dateutil
+pulp
+gunicorn
